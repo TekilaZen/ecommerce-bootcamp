@@ -1,6 +1,6 @@
 .main-nav {
-  background-color: rgb(9, 94, 66);
-  color: white;
+  background-color: salmon;
+  color: rgba(226, 212, 212, 0.932);
   height: 60px;
   display: flex;
   align-items: center;
