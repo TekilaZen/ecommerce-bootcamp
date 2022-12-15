@@ -1,25 +1,21 @@
-// .main-nav {
-//     background-color: $color-bg-primary;
-//     color: $color-text-light;
-//     height: 60px;
-//     display: flex;
-//     align-items: center;
-  
-//     .nav-links {
-//       padding: 2rem;
-  
-//       .nav-item {
-//         text-decoration: none;
-//         color: white;
-//         &.active {
-//           font-weight: 500;
-//           color: cornflowerblue;
-//         }
-//         &:hover {
-//           font-size: 1.2rem;
-//           color: darkred;
-//         }
-//       }
-//     }
-//   }
-  
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    height: 60px;
+    background-color: $color-bg-secondary;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__logo {
+        height: 45;
+    }
+    &__nav-links-container {
+        list-style: none;
+        position: absolute;
+        top: 50px;
+        background-color: red;
+    }
+}
