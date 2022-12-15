@@ -1,22 +1,11 @@
-.main-nav {
-  background-color: salmon;
-  color: rgba(226, 212, 212, 0.932);
-  height: 60px;
-  display: flex;
-  align-items: center;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.main-nav .nav-links {
-  padding: 2rem;
-}
-.main-nav .nav-links .nav-item {
+
+a {
   text-decoration: none;
-  color: white;
-}
-.main-nav .nav-links .nav-item.active {
-  font-weight: 500;
-  color: cornflowerblue;
-}
-.main-nav .nav-links .nav-item:hover {
-  font-size: 1.2rem;
-  color: darkred;
 }/*# sourceMappingURL=main.css.map */
