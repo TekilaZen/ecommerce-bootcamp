@@ -1,3 +1,38 @@
+.footer {
+  display: flex;
+  background-color: #222;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(44, 43, 43);
+}
+.footer__column {
+  padding: 1rem 1.5rem;
+}
+.footer__contact-item {
+  list-style: none;
+}
+.footer__contact-link {
+  color: white;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer__contact-icon {
+  font-size: 1.5rem;
+}
+.footer__contact-icon--facebook {
+  color: blue;
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+  }
+}
 *,
 *::before,
 *::after {
@@ -8,4 +43,5 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */
