@@ -27,6 +27,12 @@
 .footer__contact-icon--facebook {
   color: blue;
 }
+.footer__contact-icon--linkedin {
+  color: rgb(10, 102, 194);
+}
+.footer__contact-icon--instagram {
+  color: rgb(244, 47, 70);
+}
 
 @media screen and (min-width: 600px) {
   .footer {
