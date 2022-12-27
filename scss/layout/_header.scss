@@ -1,6 +1,7 @@
 .header {
   position: fixed;
   width: 100%;
+  top: 0;
 }
 
 .navbar {
@@ -10,13 +11,28 @@
   align-items: center;
   position: relative;
 
+.user-navbar{
+  margin-left: auto;
+  color: white;
+  display: flex;
+  padding: 0 1rem;
+  gap: .5rem;
+  align-items: center;
+
+
+  &__user-avatar {
+    width: 40px;
+  }
+}
+
+
   &__logo {
     height: 45;
   }
 
   &__menu-label {
     color: whitesmoke;
-    margin-left: auto;
+    // margin-left: auto;
     height: 100%;
     align-items: center;
     background-color: orangered;
@@ -109,6 +125,9 @@
       flex-direction: row;
       width: auto;
     }
+    .user-navbar {
+      order: 3;
+    }
   }
   
 //       .nav-item {
@@ -128,4 +147,4 @@
 .footer {
   display: flex;
   background-color: #222;
-}
+}}

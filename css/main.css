@@ -1,44 +1,3 @@
-.footer {
-  display: flex;
-  background-color: #222;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(44, 43, 43);
-}
-.footer__column {
-  padding: 1rem 1.5rem;
-}
-.footer__contact-item {
-  list-style: none;
-}
-.footer__contact-link {
-  color: white;
-  padding: 0.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.footer__contact-icon {
-  font-size: 1.5rem;
-}
-.footer__contact-icon--facebook {
-  color: blue;
-}
-.footer__contact-icon--linkedin {
-  color: rgb(10, 102, 194);
-}
-.footer__contact-icon--instagram {
-  color: rgb(244, 47, 70);
-}
-
-@media screen and (min-width: 600px) {
-  .footer {
-    flex-direction: row;
-  }
-}
 *,
 *::before,
 *::after {
@@ -49,18 +8,23 @@
 
 a {
   text-decoration: none;
-<<<<<<< HEAD
+  display: inline-block;
+}
+
+html {
+  font-size: 12px;
 }
 
 .main {
-  margin-top: 1rem;
-  padding: 1.5rem;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
   background-color: aliceblue;
 }
 
 .header {
   position: fixed;
   width: 100%;
+  top: 0;
 }
 
 .navbar {
@@ -70,12 +34,22 @@ a {
   align-items: center;
   position: relative;
 }
+.navbar .user-navbar {
+  margin-left: auto;
+  color: white;
+  display: flex;
+  padding: 0 1rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+.navbar .user-navbar__user-avatar {
+  width: 40px;
+}
 .navbar__logo {
   height: 45;
 }
 .navbar__menu-label {
   color: whitesmoke;
-  margin-left: auto;
   height: 100%;
   align-items: center;
   background-color: orangered;
@@ -160,7 +134,116 @@ a {
     flex-direction: row;
     width: auto;
   }
-=======
-  display: inline-block;
->>>>>>> FT-footer
+  .navbar .user-navbar {
+    order: 3;
+  }
+  .footer {
+    display: flex;
+    background-color: #222;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(44, 43, 43);
+}
+.footer__column {
+  padding: 1rem 1.5rem;
+}
+.footer__contact-item {
+  list-style: none;
+}
+.footer__contact-link {
+  color: white;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer__contact-icon {
+  font-size: 1.5rem;
+}
+.footer__contact-icon--facebook {
+  color: blue;
+}
+.footer__contact-icon--linkedin {
+  color: rgb(10, 102, 194);
+}
+.footer__contact-icon--instagram {
+  color: rgb(244, 47, 70);
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+.section-cards__header {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.section-cards__subtitle {
+  color: rgb(143, 83, 9);
+  font-size: 1rem;
+}
+.section-cards__products-search-container {
+  padding: 1rem;
+  background-color: aquamarine;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, fr);
+}
+
+@media screen and (min-width: 600px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax 200px, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .section-cards__header {
+    display: flex;
+  }
+}
+.card {
+  margin: 1rem;
+  border: 1px solid red;
+}
+.card__header {
+  height: 120px;
+  background-color: yellowgreen;
+}
+.card__img {
+  height: 120px;
+}
+.card__body {
+  padding: 1rem;
+}
+.card__title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-bottom: 2px solid orangered;
+}
+.card__description {
+  padding: 1rem 0;
+}
+.card__price {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: rgb(24, 134, 92);
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.card__date {
+  color: dodgerblue;
+}
+.card__btn {
+  padding: 1rem 1.5rem;
+  background-color: dodgerblue;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
