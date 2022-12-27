@@ -111,4 +111,21 @@
     }
   }
   
+//       .nav-item {
+//         text-decoration: none;
+//         color: white;
+//         &.active {
+//           font-weight: 500;
+//           color: cornflowerblue;
+//         }
+//         &:hover {
+//           font-size: 1.2rem;
+//           color: darkred;
+//         }
+//       }
+//     }
+//   }
+.footer {
+  display: flex;
+  background-color: #222;
 }
