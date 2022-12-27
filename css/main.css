@@ -14,4 +14,108 @@ a {
   margin-top: 1rem;
   padding: 1.5rem;
   background-color: aliceblue;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar {
+  height: 60px;
+  background-color: rgb(10, 9, 9);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navbar__logo {
+  height: 45;
+}
+.navbar__menu-label {
+  color: whitesmoke;
+  margin-left: auto;
+  height: 100%;
+  align-items: center;
+  background-color: orangered;
+  width: 42px;
+  height: 42px;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__menu-btn:checked ~ .navbar__nav-links-container {
+  height: calc(100vh - 50px);
+}
+.navbar__menu-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+}
+.navbar__menu-icon {
+  height: 2px;
+  background-color: lightblue;
+  width: 18px;
+  position: relative;
+}
+.navbar__menu-icon::after, .navbar__menu-icon::before {
+  content: "";
+  height: 2px;
+  background-color: lightblue;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+.navbar__menu-icon::after {
+  top: 5px;
+}
+.navbar__menu-icon::before {
+  top: -5px;
+}
+.navbar__menu-btn:checked ~ .navbar__menu-label .navbar__menu-icon {
+  background: transparent;
+}
+.navbar__menu-btn:checked ~ .navbar__menu-label .navbar__menu-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.navbar__menu-btn:checked ~ .navbar__menu-label .navbar__menu-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.navbar__nav-links-container {
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  background-color: rgb(66, 24, 134);
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-out;
+}
+.navbar__nav-item {
+  padding: 0.75rem 1rem;
+  background-color: blue;
+}
+.navbar__nav-item:not(:last-child) {
+  border-bottom: 1px solid brown;
+}
+.navbar__nav-link {
+  color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar__menu-label, .navbar__menu-btn {
+    display: none;
+  }
+  .navbar__nav-links-container {
+    position: static;
+    height: 100%;
+    flex-direction: row;
+    width: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

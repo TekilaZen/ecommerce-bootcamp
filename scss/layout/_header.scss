@@ -1,25 +1,114 @@
-// .main-nav {
-//     background-color: $color-bg-primary;
-//     color: $color-text-light;
-//     height: 60px;
-//     display: flex;
-//     align-items: center;
+.header {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar {
+  height: 60px;
+  background-color: rgb(10, 9, 9);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__logo {
+    height: 45;
+  }
+
+  &__menu-label {
+    color: whitesmoke;
+    margin-left: auto;
+    height: 100%;
+    align-items: center;
+    background-color: orangered;
+    width: 42px;
+    height: 42px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu-btn:checked ~ .navbar__nav-links-container {
+    height: calc(100vh - 50px);
+  }
+
+  &__menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0%;
+  }
+
+  &__menu-icon {
+    height: 2px;
+    background-color: lightblue;
+    width: 18px;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      height: 2px;
+      background-color: lightblue;
+      width: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+    }
+    &::after {
+      top: 5px;
+    }
+    &::before {
+      top: -5px;
+    }
+  }
+  &__menu-btn:checked ~ &__menu-label &__menu-icon {
+    background: transparent;
+    &::after {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    &::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
+  &__nav-links-container {
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    background-color: rgb(66, 24, 134);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-out;
+  }
+  &__nav-item {
+    padding: 0.75rem 1rem;
+    background-color: blue;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid brown;
+    }
+  }
+  &__nav-link {
+    color: white;
+  }
+}
+
+@media screen and (min-width:600px){
+  .navbar {
+    &__menu-label, &__menu-btn {
+      display: none;
+    }
+    &__nav-links-container {
+      position: static;
+      height: 100%;
+      flex-direction: row;
+      width: auto;
+    }
+  }
   
-//     .nav-links {
-//       padding: 2rem;
-  
-//       .nav-item {
-//         text-decoration: none;
-//         color: white;
-//         &.active {
-//           font-weight: 500;
-//           color: cornflowerblue;
-//         }
-//         &:hover {
-//           font-size: 1.2rem;
-//           color: darkred;
-//         }
-//       }
-//     }
-//   }
-  
+}
